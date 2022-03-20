@@ -9,74 +9,45 @@
     app:layout_constraintVertical_chainStyle="packed"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tvText"
+
+    <Button
+        android:id="@+id/btnLogcat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:text="Hello!"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnVerbose"
-        app:layout_constraintEnd_toEndOf="@+id/btnVerbose"
-        app:layout_constraintStart_toStartOf="@+id/btnVerbose"
+        android:layout_marginBottom="20dp"
+        android:onClick="onClickLog"
+        android:text="Logcat"
+        app:layout_constraintBottom_toTopOf="@+id/btnToast"
+        app:layout_constraintEnd_toEndOf="@+id/btnToast"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btnToast"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
-        android:id="@+id/btnVerbose"
+        android:id="@+id/btnToast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:onClick="onClickVerbose"
-        android:text="Verbose"
-        app:layout_constraintBottom_toTopOf="@+id/btnDebug"
-        app:layout_constraintEnd_toEndOf="@+id/btnDebug"
-        app:layout_constraintStart_toStartOf="@+id/btnDebug"
-        app:layout_constraintTop_toBottomOf="@+id/tvText" />
+        android:layout_marginBottom="20dp"
+        android:onClick="onClickToast"
+        android:text="Toast"
+        app:layout_constraintBottom_toTopOf="@+id/btnTask"
+        app:layout_constraintEnd_toEndOf="@+id/btnTask"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btnTask"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogcat"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
-        android:id="@+id/btnDebug"
+        android:id="@+id/btnTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onClickDebug"
-        android:text="Debug"
-        app:layout_constraintBottom_toTopOf="@+id/btnInfo"
-        app:layout_constraintEnd_toEndOf="@+id/btnInfo"
-        app:layout_constraintStart_toStartOf="@+id/btnInfo"
-        app:layout_constraintTop_toBottomOf="@+id/btnVerbose" />
-
-    <Button
-        android:id="@+id/btnInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:onClick="onClickInfo"
-        android:text="Information"
-        app:layout_constraintBottom_toTopOf="@+id/btnWarning"
-        app:layout_constraintEnd_toEndOf="@+id/btnWarning"
-        app:layout_constraintStart_toStartOf="@+id/btnWarning"
-        app:layout_constraintTop_toBottomOf="@+id/btnDebug" />
-
-    <Button
-        android:id="@+id/btnWarning"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onClickWarning"
-        android:text="Warning"
-        app:layout_constraintBottom_toTopOf="@+id/btnError"
-        app:layout_constraintEnd_toEndOf="@+id/btnError"
-        app:layout_constraintStart_toStartOf="@+id/btnError"
-        app:layout_constraintTop_toBottomOf="@+id/btnInfo" />
-
-    <Button
-        android:id="@+id/btnError"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onClickError"
-        android:text="Error"
+        android:onClick="onClickTask"
+        android:text="Task"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnWarning" />
-
+        app:layout_constraintTop_toBottomOf="@+id/btnToast"
+        app:layout_constraintVertical_chainStyle="packed" />
 </androidx.constraintlayout.widget.ConstraintLayout>

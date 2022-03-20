@@ -1,11 +1,15 @@
 package com.example.logcattoastexample
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import android.view.View
+import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,43 +17,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun onClickVerbose(view: View) {
-        val textView: TextView = findViewById(R.id.tvText)
-
-        Log.v("VERBOSE", "Button VERBOSE was clicked.")
-
-        textView.text = "Button VERBOSE was clicked, verbose Log was added."
+    fun onClickLog(view: View) {
+        startActivity(Intent(this, LogActivity::class.java))
     }
 
-    fun onClickDebug(view: View) {
-        val textView: TextView = findViewById(R.id.tvText)
-
-        Log.d("DEBUG", "Button DEBUG was clicked.")
-
-        textView.text = "Button DEBUG was clicked, debug Log was added."
+    fun onClickToast(view: View) {
+        startActivity(Intent(this, ToastActivity::class.java))
     }
 
-    fun onClickInfo(view: View) {
-        val textView: TextView = findViewById(R.id.tvText)
+    fun onClickTask(view: View) {
+        //startActivity(Intent(this, TaskActivity::class.java))
 
-        Log.i("INFORMATION", "Button INFORMATION was clicked.")
-
-        textView.text = "Button INFORMATION was clicked, information Log was added."
     }
 
-    fun onClickWarning(view: View) {
-        val textView: TextView = findViewById(R.id.tvText)
-
-        Log.w("WARNING", "Button WARNING was clicked.")
-
-        textView.text = "Button WARNING was clicked, warning Log was added."
-    }
-
-    fun onClickError(view: View) {
-        val textView: TextView = findViewById(R.id.tvText)
-
-        Log.e("ERROR", "Button ERROR was clicked.")
-
-        textView.text = "Button ERROR was clicked, error Log was added."
-    }
 }
