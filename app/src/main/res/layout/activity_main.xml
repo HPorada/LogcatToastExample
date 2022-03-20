@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constrainedHeight="false"
+    app:layout_constrainedWidth="false"
+    app:layout_constraintVertical_chainStyle="packed"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="Hello!"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnVerbose"
+        app:layout_constraintEnd_toEndOf="@+id/btnVerbose"
+        app:layout_constraintStart_toStartOf="@+id/btnVerbose"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/btnVerbose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:onClick="onClickVerbose"
+        android:text="Verbose"
+        app:layout_constraintBottom_toTopOf="@+id/btnDebug"
+        app:layout_constraintEnd_toEndOf="@+id/btnDebug"
+        app:layout_constraintStart_toStartOf="@+id/btnDebug"
+        app:layout_constraintTop_toBottomOf="@+id/tvText" />
+
+    <Button
+        android:id="@+id/btnDebug"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickDebug"
+        android:text="Debug"
+        app:layout_constraintBottom_toTopOf="@+id/btnInfo"
+        app:layout_constraintEnd_toEndOf="@+id/btnInfo"
+        app:layout_constraintStart_toStartOf="@+id/btnInfo"
+        app:layout_constraintTop_toBottomOf="@+id/btnVerbose" />
+
+    <Button
+        android:id="@+id/btnInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:onClick="onClickInfo"
+        android:text="Information"
+        app:layout_constraintBottom_toTopOf="@+id/btnWarning"
+        app:layout_constraintEnd_toEndOf="@+id/btnWarning"
+        app:layout_constraintStart_toStartOf="@+id/btnWarning"
+        app:layout_constraintTop_toBottomOf="@+id/btnDebug" />
+
+    <Button
+        android:id="@+id/btnWarning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickWarning"
+        android:text="Warning"
+        app:layout_constraintBottom_toTopOf="@+id/btnError"
+        app:layout_constraintEnd_toEndOf="@+id/btnError"
+        app:layout_constraintStart_toStartOf="@+id/btnError"
+        app:layout_constraintTop_toBottomOf="@+id/btnInfo" />
+
+    <Button
+        android:id="@+id/btnError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickError"
+        android:text="Error"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnWarning" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
