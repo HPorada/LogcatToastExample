@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onClickTask(view: View) {
-        //startActivity(Intent(this, TaskActivity::class.java))
+        startActivity(Intent(this, TaskActivity::class.java))
 
     }
 
